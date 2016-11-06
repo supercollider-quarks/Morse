@@ -11,7 +11,7 @@ Morse {
 			times = code.collect({ arg code, i; 
 				[ [ dot, dash, stop ] @ code, intra ];
 			}).flat; 
-			if(times[time.size-2] == stop, {times.putLast(medium)}, {times.putLast(short)});
+			if(times[times.size-2] == stop, {times.putLast(medium)}, {times.putLast(short)});
 
 		}, { if (verbose) { ("Morse found nothing for key: " + char).inform }; [] });
 		
